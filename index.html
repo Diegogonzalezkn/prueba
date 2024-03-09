@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="styles.css">
-  <script>
+   <script>
     function redirigirAPrincipal() {
       // Cambia la URL a la que quieres redirigir al usuario
       window.location.href = "principal.html";
@@ -17,6 +17,9 @@
 
       var formularioLogin = document.getElementById("formularioLogin");
       formularioLogin.style.display = "none";
+
+      // Ocultar el mensaje de registro exitoso al mostrar el formulario
+      document.getElementById("mensajeRegistroExitoso").style.display = "none";
     }
 
     function mostrarFormularioLogin() {
@@ -25,6 +28,26 @@
 
       var formularioLogin = document.getElementById("formularioLogin");
       formularioLogin.style.display = "block";
+    }
+
+    function mostrarMensajeRegistroExitoso() {
+      // Mostrar el mensaje de registro exitoso al hacer clic en el botón de registro
+      document.getElementById("mensajeRegistroExitoso").style.display = "block";
+    }
+
+    function validarRegistro() {
+      // Validar que los campos obligatorios estén completos
+      var nombre = document.getElementById("nombre").value;
+      var email = document.getElementById("email").value;
+      var genero = document.getElementById("genero").value;
+      var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+
+      if (nombre === "" || email === "" || genero === "" || fechaNacimiento === "") {
+        alert("Por favor, complete todos los campos obligatorios.");
+        return false;
+      }
+
+      return true;
     }
   </script>
 </head>
@@ -50,7 +73,7 @@
       <h2>Registro</h2>
       <div class="input-group">
         <label for="nombre">Nombre y apellido:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="nombre y apellido" required>
       </div>
       
       <div class="input-group">
@@ -68,10 +91,11 @@
         <label for="fechaNacimiento">Fecha de Nacimiento:</label>
         <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
       </div>
-      <div class="button-group">
-        <button type="submit">Registrarse</button>
+       <div class="button-group">
+        <button type="submit" onclick="mostrarMensajeRegistroExitoso()">Registrarse</button>
         <button type="button" class="back-button" onclick="mostrarFormularioLogin();">Volver</button>
       </div>
+      <p id="mensajeRegistroExitoso" style="display: none;">Registrado exitosamente.</p>
     </form>
   </div>
 </body>
