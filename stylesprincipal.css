@@ -1,115 +1,121 @@
 body {
-    background: url('friends.webp') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
+     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif; /* Utiliza Open Sans como la fuente principal */
+    font-family: 'Open Sans', sans-serif;
+    background: url('friends.webp') no-repeat center center fixed; /* Cambia 'tu-imagen-de-fondo.jpg' con la ruta de tu imagen */
+    background-size: cover;
 }
 
-header, nav, h2, h3, p, input, button {
-    font-family: 'Pacifico', cursive; /* Utiliza Pacifico para encabezados, texto y otros elementos */
-}
 #topbar {
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
+    background-color: rgba(51, 51, 51, 0.9); /* Fondo del encabezado con transparencia */
+    color: white;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#topbar header {
+header {
     font-size: 24px;
-    margin: 0;
 }
 
 #navbar {
-    color: #fff;
     display: flex;
 }
 
 #navbar a {
-    color: #fff;
+    margin: 0 10px;
     text-decoration: none;
-    margin-right: 20px;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    color: white;
 }
 
-#navbar a:hover {
-    color: #4CAF50;
+.search-profile-container {
+    display: flex;
+    align-items: center;
 }
 
 .search-container {
-    margin-top: 10px;
+    text-align: right;
+    margin-left: auto;
 }
 
-form {
+.search-container form {
     display: flex;
 }
 
-input {
-    padding: 10px; /* Ajusta el padding según tu preferencia */
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.search-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px; /* Ajusta el padding según tu preferencia */
+.search-container button {
+    background-color: #555;
+    color: white;
+    padding: 5px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #45a049;
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 #container {
     display: flex;
-    justify-content: center; /* Centra el contenido en la pantalla */
-    margin-top: 20px; /* Ajusta el margen según tu preferencia */
+    justify-content: center;
+    flex-wrap: wrap; /* Asegura que los elementos se envuelvan en pantallas pequeñas */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo transparente de las publicaciones */
+    padding: 20px; /* Espaciado para las publicaciones */
 }
 
 #content {
-    width: 60%; /* Ajusta el ancho según tu preferencia */
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.profile {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    width: 60%;
 }
 
 .post {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     margin-bottom: 20px;
+    background-color: #fff; /* Fondo blanco para cada publicación */
+    padding: 15px; /* Espaciado interno para cada publicación */
 }
 
-.post h3 {
-    margin-top: 0;
-    color: #333;
+.post button {
+    background-color: #555;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-.post p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #666;
+.profile-search img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* Regla de medios para pantallas pequeñas (hasta 600px) */
+@media only screen and (max-width: 600px) {
+    #topbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-profile-container,
+    .profile img {
+        margin: 10px 0;
+    }
+
+    .search-container {
+        margin: 10px 0;
+    }
+
+    #content {
+        width: 90%;
+    }
 }
