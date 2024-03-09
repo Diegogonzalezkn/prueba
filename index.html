@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function redirigirAPrincipal() {
+      // Cambia la URL a la que quieres redirigir al usuario
+      window.location.href = "principal.html";
+    }
+
+    function mostrarFormularioRegistro() {
+      var formularioRegistro = document.getElementById("formularioRegistro");
+      formularioRegistro.style.display = "block";
+
+      var formularioLogin = document.getElementById("formularioLogin");
+      formularioLogin.style.display = "none";
+    }
+
+    function mostrarFormularioLogin() {
+      var formularioRegistro = document.getElementById("formularioRegistro");
+      formularioRegistro.style.display = "none";
+
+      var formularioLogin = document.getElementById("formularioLogin");
+      formularioLogin.style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <div class="login-container">
+    <form id="formularioLogin" class="login-form" action="#" method="post" onsubmit="redirigirAPrincipal(); return false;">
+      <h2>Iniciar sesión</h2>
+      <div class="input-group">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="button-group">
+        <button type="submit">Iniciar sesión</button>
+        <button type="button" class="register-button" onclick="mostrarFormularioRegistro();">Registrarse</button>
+      </div>
+    </form>
+
+    <form id="formularioRegistro" class="login-form" action="/register.php" method="post" style="display: none;">
+      <h2>Registro</h2>
+      <div class="input-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="input-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+      </div>
+      <div class="input-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="input-group">
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+          <option value="hombre">Hombre</option>
+          <option value="mujer">Mujer</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+      </div>
+      <div class="button-group">
+        <button type="submit">Registrarse</button>
+        <button type="button" class="back-button" onclick="mostrarFormularioLogin();">Volver</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

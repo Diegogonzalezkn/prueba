@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesprincipal.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap">
+    <title>Red Social</title>
+</head>
+<body>
+
+    <div id="topbar">
+        <header>FRIENDS</header>
+        <nav id="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">Explorar</a>
+            <a href="#">Notificaciones</a>
+            <a href="#">Mensajes</a>
+        </nav>
+        <div class="search-container">
+            <form action="#">
+                <input type="text" placeholder="Buscar personas..." name="search">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="content">
+            <div class="profile">
+                <img src="mendez.jpg" alt="Avatar">
+                <h2>Benito Camelo</h2>
+            </div>
+
+            <div class="post">
+                <h3>Publicación de Usuario</h3>
+                <p>Contenido de la publicación...</p>
+                <button onclick="darMeGusta()">Me gusta</button>
+                <span id="contadorMeGusta">0</span>
+            </div>
+
+            <!-- Puedes agregar más publicaciones aquí -->
+
+        </div>
+    </div>
+
+    <script>
+        var contadorMeGusta = 0;
+
+        function darMeGusta() {
+            contadorMeGusta++;
+            document.getElementById('contadorMeGusta').innerText = contadorMeGusta;
+        }
+    </script>
+
+</body>
+</html>

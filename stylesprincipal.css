@@ -1,0 +1,115 @@
+body {
+    background: url('friends.webp') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif; /* Utiliza Open Sans como la fuente principal */
+}
+
+header, nav, h2, h3, p, input, button {
+    font-family: 'Pacifico', cursive; /* Utiliza Pacifico para encabezados, texto y otros elementos */
+}
+#topbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#topbar header {
+    font-size: 24px;
+    margin: 0;
+}
+
+#navbar {
+    color: #fff;
+    display: flex;
+}
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+    color: #4CAF50;
+}
+
+.search-container {
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    padding: 10px; /* Ajusta el padding según tu preferencia */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px; /* Ajusta el padding según tu preferencia */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#container {
+    display: flex;
+    justify-content: center; /* Centra el contenido en la pantalla */
+    margin-top: 20px; /* Ajusta el margen según tu preferencia */
+}
+
+#content {
+    width: 60%; /* Ajusta el ancho según tu preferencia */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.post {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.post p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
